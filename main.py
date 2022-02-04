@@ -1,3 +1,8 @@
+# This program is coded by 47hx1-53r
+#This is created only for educational purposes
+#Usage in a bad intention may cause serious life-problems
+#
+#
 import socket, requests
 import random
 import threading
@@ -5,15 +10,15 @@ import time
 import sys
 import colorama
 from colorama import Fore, Style
-
-
+#
+#
 def delay_print(s):
     for c in s:
         sys.stdout.write(c)
         sys.stdout.flush()
         time.sleep(0.009)
-
-
+#
+#
 def display_banner():
     delay_print(f'''{Fore.YELLOW}
 
