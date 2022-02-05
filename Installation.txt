@@ -1,8 +1,11 @@
 git clone https://github.com/47hxl-53r/fl00d3r 
 
-
 ls
 
 cd fl00d3r
+
+pip install requests
+
+pip install colorama
 
 python3 main.py
