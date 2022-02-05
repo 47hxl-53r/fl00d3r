@@ -1,0 +1,8 @@
+git clone https://github.com/47hxl-53r/fl00d3r 
+
+
+ls
+
+cd fl00d3r
+
+python3 main.py
