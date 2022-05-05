@@ -6,7 +6,7 @@ Try updating packages
 
 |--Dont--|
 
-Do not use this tool for unethical practises
+Do not use this tool for unethical practices
 
 
 |--Usage--|
